@@ -89,14 +89,70 @@ body {
   font-size: 14px;
   line-height: 14px;
 
-  /* color: #dedede; */
-  opacity: 0.2;
+  /* color: limegreen; */
+  opacity: 0.26;
 }
 
-.block__list {
+.block__ordered-list,
+.block__unordered-list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.block__ul-item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  margin-bottom: 36px;
+  font-weight: bold;
+}
+.block__ul-item::before {
+  content: "";
+  position: absolute;
+  width: 270px;
+  height: 3px;
+
+  left: 0;
+  top: 30px;
+  background-color: grey;
+}
+
+.block__ul-item::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+
+  left: 0;
+  top: 30px;
+  background-color: limegreen;
+}
+
+.block__ul-item:first-child::after {
+  width: 90px;
+}
+
+.block__ul-item:nth-child(2)::after {
+  width: 180px;
+}
+
+.block__ul-item:nth-child(3)::after {
+  width: 120px;
+}
+
+.block__ul-item:nth-child(4)::after {
+  width: 60px;
+}
+
+.block__ul-item:nth-child(5)::after {
+  width: 90px;
+}
+
+.block__ul-item > span {
+  margin-right: 16px;
+  color: limegreen;
 }
 .visually-hidden {
   position: absolute;
