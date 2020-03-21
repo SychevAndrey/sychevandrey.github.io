@@ -46,19 +46,14 @@ body {
 }
 
 .contacts__list {
-	display: flex;
-	flex-wrap: wrap;
   margin: 0;
-  padding: 0;
   padding: 0 18px;
-
   list-style: none;
 }
 
 .contacts__item {
   margin: 0;
   padding: 0;
-
   margin-bottom: 24px;
 }
 
@@ -90,8 +85,6 @@ body {
 }
 
 .block__header {
-	box-sizing: border-box;
-	width: 210px;
 	position: relative;
 	font-size: 24px;
 }
@@ -267,10 +260,11 @@ body {
 }
 
 .contacts__list {
-  padding-left: 22px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 .contacts__item {
@@ -408,7 +402,6 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .block__description {
