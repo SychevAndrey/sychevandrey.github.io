@@ -83,11 +83,12 @@ body {
 .block {
   margin: 0 18px;
 }
+
 .block__header {
 	box-sizing: border-box;
 	width: 210px;
-  position: relative;
-  font-size: 24px;
+	position: relative;
+	font-size: 24px;
 }
 
 .block__header > span {
@@ -278,7 +279,6 @@ body {
 
 .block {
   margin: 0;
-  display: flex;
 }
 
 .block__description {
@@ -455,7 +455,6 @@ body {
 .block__item {
   padding: 30px;
   padding-bottom: 0;
-  width: 300px;
 }
 
 .block__item-header {
