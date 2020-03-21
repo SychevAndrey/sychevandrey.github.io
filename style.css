@@ -84,6 +84,11 @@ body {
   margin: 0 18px;
 }
 
+.block__link {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
 .block__header {
 	box-sizing: border-box;
 	width: 210px;
@@ -289,7 +294,7 @@ body {
   position: relative;
   margin: 0;
   font-size: 24px;
-  padding: 30px;
+  padding: 0 30px;
   flex-basis: 200px;
 }
 
@@ -354,6 +359,11 @@ body {
   html {
     background-color: rgb(250, 247, 245);
   }
+  
+  main {
+	padding-top: 25px;
+  }
+  
   .header, main {
   width: 1120px;
   display: flex;
@@ -411,11 +421,10 @@ body {
   position: relative;
   margin: 0;
   font-size: 24px;
-  padding: 30px;
   flex-basis: 375px;
   flex-shrink: 0;
   box-sizing: border-box;
-  text-align: right;
+  text-align: center;
 }
 
 .block__header > span {
