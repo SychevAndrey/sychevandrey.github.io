@@ -271,7 +271,6 @@ body {
 .contacts__item {
   margin: 0;
   padding: 0;
-  flex-basis: 250px;
   flex-shrink: 0;
   margin-bottom: 24px;
 }
@@ -397,6 +396,7 @@ body {
 
 .contacts__list {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
 }
