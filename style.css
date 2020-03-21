@@ -46,6 +46,8 @@ body {
 }
 
 .contacts__list {
+	display: flex;
+	flex-wrap: wrap;
   margin: 0;
   padding: 0;
   padding: 0 18px;
@@ -82,6 +84,8 @@ body {
   margin: 0 18px;
 }
 .block__header {
+	box-sizing: border-box;
+	width: 210px;
   position: relative;
   font-size: 24px;
 }
