@@ -7,6 +7,11 @@ document.querySelectorAll('.key').forEach((keyElement) => {
     if (e.propertyName !== 'transform') return;
     keyElement.classList.remove('key--playing');
   })
+  keyElement.addEventListener('click', () => {
+    keys[keyElement.dataset.key].classList.add('key--playing');
+    sounds[keyElement.dataset.key].currentTime = 0;
+    sounds[keyElement.dataset.key].play();
+  })
 });
 
 document.querySelectorAll('audio').forEach((audioElement) => {
