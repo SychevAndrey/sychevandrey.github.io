@@ -1,5 +1,30 @@
 const url = 'https://web-standards.ru/calendar.json';
 const grid = document.querySelector('.calendar-grid');
+const searchInput = document.getElementById('city-search-input');
+let allEvents;
+
+function renderEvents(events) {
+	events.map((event) => {
+		grid.appendChild(createEventElement(event));
+	});
+}
+
+function filterEventsByCityName(cityname) {
+  const events = allEvents.filter((event) => {
+    if (typeof event.location === 'string') {
+      return event.location.includes(cityname);
+    } else {
+      return false;
+    }
+    
+  });
+  grid.innerHTML = '';
+  renderEvents(events);
+}
+
+searchInput.addEventListener('keyup', (e) => {
+  filterEventsByCityName(searchInput.value);
+});
 
 function countDuration(start, end) {
 	const day = 1000 * 60 * 60 * 24;
@@ -16,7 +41,7 @@ function createEventElement(event) {
 	div.classList.add('grid-element');
 	if (days == 2)
 		div.classList.add('grid-element-2');
-	if (days == 3)
+	if (days >= 3)
 		div.classList.add('grid-element-3');
 	div.setAttribute( 'href', event.description );
 	header.classList.add('grid-element__header');
@@ -41,10 +66,10 @@ async function getData() {
 }
 
 async function main() {
-	const data = await getData();
-	data.reverse().map(event => {	
-		grid.appendChild(createEventElement(event));
-	});
+  const data = await getData();
+  allEvents = data.reverse();
+  console.log(allEvents);
+  renderEvents(allEvents);
 }
 
 main();
